@@ -12,6 +12,8 @@
 		18987D5A201333AB00E74FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18987D58201333AB00E74FBD /* Main.storyboard */; };
 		18987D5C201333AB00E74FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18987D5B201333AB00E74FBD /* Assets.xcassets */; };
 		18987D5F201333AB00E74FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18987D5D201333AB00E74FBD /* LaunchScreen.storyboard */; };
+		189C57EC20133AB9009CFAAC /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C57EA20133AB9009CFAAC /* CardViewCell.swift */; };
+		189C57ED20133AB9009CFAAC /* CardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189C57EB20133AB9009CFAAC /* CardViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		18987D5B201333AB00E74FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18987D5E201333AB00E74FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18987D60201333AB00E74FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189C57EA20133AB9009CFAAC /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		189C57EB20133AB9009CFAAC /* CardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				18987D5B201333AB00E74FBD /* Assets.xcassets */,
 				18987D5D201333AB00E74FBD /* LaunchScreen.storyboard */,
 				18987D60201333AB00E74FBD /* Info.plist */,
+				189C57EA20133AB9009CFAAC /* CardViewCell.swift */,
+				189C57EB20133AB9009CFAAC /* CardViewCell.xib */,
 			);
 			path = iOSCardView;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			files = (
 				18987D5F201333AB00E74FBD /* LaunchScreen.storyboard in Resources */,
 				18987D5C201333AB00E74FBD /* Assets.xcassets in Resources */,
+				189C57ED20133AB9009CFAAC /* CardViewCell.xib in Resources */,
 				18987D5A201333AB00E74FBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189C57EC20133AB9009CFAAC /* CardViewCell.swift in Sources */,
 				18987D57201333AB00E74FBD /* ViewController.swift in Sources */,
 				18987D55201333AB00E74FBD /* AppDelegate.swift in Sources */,
 			);
