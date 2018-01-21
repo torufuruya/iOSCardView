@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //Configure table view components
         tableView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
+//        tableView.backgroundColor = .white
         tableView.register(UINib.init(nibName: identifier, bundle: Bundle.main), forCellReuseIdentifier: identifier)
     }
 
