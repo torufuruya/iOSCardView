@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="135.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKy-aW-JV0" userLabel="ShadowView">
@@ -25,7 +25,60 @@
                     </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tv-BK-xX0">
                         <rect key="frame" x="16" y="0.0" width="288" height="136"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEAN &amp; DELUCA DEAN &amp; DELUCA DEAN &amp; DELUCA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCW-Fj-4db">
+                                <rect key="frame" x="10" y="10" width="188" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-QQ-sb7">
+                                <rect key="frame" x="10" y="56" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXK-B3-1FO">
+                                <rect key="frame" x="228" y="54.5" width="50" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="656-ch-Bci">
+                                        <rect key="frame" x="12" y="4" width="26.5" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1n7-Zq-IpH"/>
+                                    <constraint firstItem="656-ch-Bci" firstAttribute="centerY" secondItem="FXK-B3-1FO" secondAttribute="centerY" id="DPD-p8-icJ"/>
+                                    <constraint firstItem="656-ch-Bci" firstAttribute="centerX" secondItem="FXK-B3-1FO" secondAttribute="centerX" id="JqC-Kb-dfj"/>
+                                    <constraint firstAttribute="height" constant="20" id="rua-DQ-NRs"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nd-R1-2k2">
+                                <rect key="frame" x="208" y="20.5" width="70" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="NNR-mM-eUE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FXK-B3-1FO" firstAttribute="centerY" secondItem="nbC-QQ-sb7" secondAttribute="centerY" id="3lQ-Eb-Djx"/>
+                            <constraint firstItem="5Nd-R1-2k2" firstAttribute="leading" secondItem="mCW-Fj-4db" secondAttribute="trailing" constant="10" id="GU5-xE-LCt"/>
+                            <constraint firstAttribute="bottom" secondItem="nbC-QQ-sb7" secondAttribute="bottom" priority="251" constant="10" id="K3t-OF-3ik"/>
+                            <constraint firstItem="nbC-QQ-sb7" firstAttribute="top" secondItem="mCW-Fj-4db" secondAttribute="bottom" constant="5" id="PEt-do-N2d"/>
+                            <constraint firstItem="nbC-QQ-sb7" firstAttribute="leading" secondItem="mCW-Fj-4db" secondAttribute="leading" id="Sgi-sl-syG"/>
+                            <constraint firstItem="mCW-Fj-4db" firstAttribute="top" secondItem="7tv-BK-xX0" secondAttribute="top" constant="10" id="X68-CJ-q0l"/>
+                            <constraint firstItem="5Nd-R1-2k2" firstAttribute="trailing" secondItem="FXK-B3-1FO" secondAttribute="trailing" id="YME-ef-2fC"/>
+                            <constraint firstItem="5Nd-R1-2k2" firstAttribute="centerY" secondItem="mCW-Fj-4db" secondAttribute="centerY" id="jcq-gb-xgm"/>
+                            <constraint firstAttribute="trailing" secondItem="5Nd-R1-2k2" secondAttribute="trailing" constant="10" id="oHK-fB-xWj"/>
+                            <constraint firstItem="mCW-Fj-4db" firstAttribute="leading" secondItem="7tv-BK-xX0" secondAttribute="leading" constant="10" id="ubJ-Dh-e80"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -43,6 +96,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="amountLabel" destination="5Nd-R1-2k2" id="Jnu-6v-mWo"/>
+                <outlet property="descriptionLabel" destination="mCW-Fj-4db" id="Y99-27-rdv"/>
+                <outlet property="kindContainerView" destination="FXK-B3-1FO" id="yFH-Kp-oze"/>
+                <outlet property="kindLabel" destination="656-ch-Bci" id="Xuw-gW-Gv0"/>
+                <outlet property="publishedAt" destination="nbC-QQ-sb7" id="NR7-v1-AZj"/>
                 <outlet property="shadowView" destination="LKy-aW-JV0" id="r0x-SF-Gsj"/>
                 <outlet property="view" destination="7tv-BK-xX0" id="FrX-3k-hZ1"/>
             </connections>
