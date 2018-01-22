@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Configure table view components
-        tableView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
-//        tableView.backgroundColor = .white
+        tableView.backgroundColor = .white
         tableView.register(UINib.init(nibName: identifier, bundle: Bundle.main), forCellReuseIdentifier: identifier)
     }
 
@@ -34,7 +33,7 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 10 : 1
+        return section == 0 ? 10 : 20
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
