@@ -132,3 +132,14 @@ class CardViewCell: UITableViewCell {
         layer.masksToBounds = false
     }
 }
+
+
+struct Data : Codable {
+    let id: String
+    let amount: Int
+    let currency: String
+    let description: String
+    let kind: String
+    let pushed_at: String
+}
+

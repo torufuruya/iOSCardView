@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184ED38520161425002E5BFD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184ED38420161425002E5BFD /* Alamofire.framework */; };
 		18987D55201333AB00E74FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18987D54201333AB00E74FBD /* AppDelegate.swift */; };
 		18987D57201333AB00E74FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18987D56201333AB00E74FBD /* ViewController.swift */; };
 		18987D5A201333AB00E74FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18987D58201333AB00E74FBD /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184ED38420161425002E5BFD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		18987D51201333AB00E74FBD /* iOSCardView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCardView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18987D54201333AB00E74FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18987D56201333AB00E74FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184ED38520161425002E5BFD /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184ED38320161424002E5BFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184ED38420161425002E5BFD /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18987D48201333AB00E74FBD = {
 			isa = PBXGroup;
 			children = (
 				18987D53201333AB00E74FBD /* iOSCardView */,
 				18987D52201333AB00E74FBD /* Products */,
+				184ED38320161424002E5BFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +92,7 @@
 				18987D4D201333AB00E74FBD /* Sources */,
 				18987D4E201333AB00E74FBD /* Frameworks */,
 				18987D4F201333AB00E74FBD /* Resources */,
+				184ED38620161517002E5BFD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -137,6 +150,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		184ED38620161517002E5BFD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18987D4D201333AB00E74FBD /* Sources */ = {
@@ -283,6 +313,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSCardView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toru.furuya.iOSCardView;
@@ -297,6 +331,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSCardView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toru.furuya.iOSCardView;

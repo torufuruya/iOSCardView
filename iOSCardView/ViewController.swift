@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,10 @@ class ViewController: UIViewController {
         //Configure table view components
         tableView.backgroundColor = .white
         tableView.register(UINib.init(nibName: identifier, bundle: Bundle.main), forCellReuseIdentifier: identifier)
+
+        Alamofire.request("http://www.mocky.io/v2/5a275eb23000006e3c0e8a5e").responseData { response in
+            print(response)
+        }
     }
 
     override func didReceiveMemoryWarning() {
