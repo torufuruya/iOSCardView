@@ -1,5 +1,12 @@
+# Created by https://www.gitignore.io/api/xcode,carthage
 
-# Created by https://www.gitignore.io/api/xcode
+### Carthage ###
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+# Carthage/Build
 
 ### Xcode ###
 # Xcode
@@ -7,7 +14,8 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
+## Use * to include Carthage build
+build/*
 DerivedData/
 
 ## Various settings
@@ -34,8 +42,4 @@ xcuserdata/
 /*.gcno
 
 
-# End of https://www.gitignore.io/api/xcode
-
-
-
-# Created by https://www.gitignore.io/api/carthage
+# End of https://www.gitignore.io/api/xcode,carthage
