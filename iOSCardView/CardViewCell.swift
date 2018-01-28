@@ -23,6 +23,16 @@ class CardViewCell: UITableViewCell {
     var indexPath: IndexPath? = nil
     var isTappable = true
 
+    private var isSingleRow: Bool {
+        return numberOfRows == 1
+    }
+    private var isFirstRow: Bool {
+        return numberOfRows == 1 || indexPath?.row == 0
+    }
+    private var isLastRow: Bool {
+        return numberOfRows == 1 || indexPath?.row == numberOfRows - 1
+    }
+
     private var appData: AppData? = nil
 
     func configure(appData: AppData) {
@@ -89,30 +99,27 @@ class CardViewCell: UITableViewCell {
             kindContainerView.layer.borderColor = UIColor.darkGray.cgColor
         }
 
-        makeCornerAndShadow()
+        makeShadow()
+        makeCornerRounded()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        makeCornerAndShadow()
+        setNeedsDisplay()
     }
 
-    func makeCornerAndShadow() {
-        let isSingleRow = numberOfRows == 1
-        let isFirstRow = numberOfRows == 1 || indexPath?.row == 0
-        let isLastRow = numberOfRows == 1 || indexPath?.row == numberOfRows - 1
-
+    private func makeShadow() {
         // Rect for shadow
-        var shadowRect = view.bounds
+        var shadowRect = shadowView.bounds
         if !isSingleRow {
             shadowRect = shadowRect.insetBy(dx: 0, dy: -5)
             if (isFirstRow) { shadowRect.origin.y += 5 }
             if (isLastRow) { shadowRect.size.height -= 5 }
         }
 
-        // Rect for corner radius mask
-        var maskRect = view.bounds.insetBy(dx: -20, dy: 0)
+        // Rect for shadow mask
+        var maskRect = shadowView.bounds.insetBy(dx: -20, dy: 0)
         if (isFirstRow) {
             maskRect.origin.y -= 5
             maskRect.size.height += 5
@@ -132,7 +139,9 @@ class CardViewCell: UITableViewCell {
         let shadowMask = CAShapeLayer()
         shadowMask.path = UIBezierPath(rect: maskRect).cgPath
         shadowView.layer.mask = shadowMask
+    }
 
+    private func makeCornerRounded() {
         // Mask for corner radius
         var corners: UIRectCorner = []
         if isSingleRow { corners = [.allCorners] }
@@ -150,4 +159,3 @@ class CardViewCell: UITableViewCell {
         view.layer.masksToBounds = false
     }
 }
-
